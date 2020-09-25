@@ -1,0 +1,16 @@
+---
+- name: Install common packages
+  action: >
+    {{ ansible_pkg_mgr }} name={{ item }} state=present update_cache=yes
+  with_items:
+    - screen
+    - vim
+    - telnet
+    - tcpdump
+    - openvpn
+    - supervisor
+    - git
+    - wget
+    - curl
+    - munin
+    - munin-node
